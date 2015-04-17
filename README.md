@@ -19,11 +19,11 @@ Each trial BED file is compressed with the currently installed version of ``star
 
 One test of median compression ratios for the composite case (simulated BED3 + Bedgraph, variable elements, 10 trials):
 
-| elements | bzip2 | gzip |
-|----------|-------|------|
-| 1000     | 0.79  | 0.75 |
-| 10000    | 0.27  | 0.32 |
-| 100000   | 0.21  | 0.29 |
-| 1000000  | 0.18  | 0.27 |
+| elements | bzip2-starch | gzip-starch |
+|----------|--------------|-------------|
+| 1000     | 0.79         | 0.75        |
+| 10000    | 0.27         | 0.32        |
+| 100000   | 0.21         | 0.29        |
+| 1000000  | 0.18         | 0.27        |
 
-For a "composite" BED file containing 100K elements, for instance, the approximate bzip2 compression efficiency will be ~21% of the original, uncompressed file size.
+For a "composite" BED file containing 100K elements, for instance, the approximate bzip2-backed Starch compression efficiency will be ~21% of the original, uncompressed file size.
