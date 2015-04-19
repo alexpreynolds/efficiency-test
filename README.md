@@ -1,5 +1,6 @@
-# efficiency-test
-These scripts can be used to test the relative efficiency of ``starch --bzip2`` and ``--gzip`` options on randomly generated BED3, Bedgraph, and composite (BED3 + Bedgraph) data at scales of 1K to 1M elements, at 10-fold increments. Other element sizes and increments can be tested by the end user with appropriate tweaks of the ``makefile``.
+# starch-efficiency
+
+These scripts can be used to test the relative efficiency of BEDOPS v2.4.12 ``starch --bzip2`` and ``--gzip`` options on randomly generated BED3, Bedgraph, and composite (BED3 + Bedgraph) data at scales of 1K to 1M elements, at 10-fold increments. Other element sizes and increments can be tested by the end user with appropriate tweaks of the ``makefile``.
 
 ## Requirements
 
@@ -17,7 +18,7 @@ Each trial BED file is compressed with the currently installed version of ``star
 
 ## Results
 
-One test of median compression ratios for simulated BED3, 150 nt elements, 10 trials:
+One test of median compression ratios for simulated BED3, 150 nt elements, 10 trials, run with the BEDOPS v2.4.12 toolkit:
 
 | elements | bzip2-starch | gzip-starch |
 |----------|--------------|-------------|
