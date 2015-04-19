@@ -4,7 +4,7 @@ These scripts can be used to test the relative efficiency of BEDOPS v2.4.12 ``st
 
 ## Requirements
 
-The R script ``starch_eff.R`` requires ``optparse`` and ``lattice`` libraries. Use ``install.packages()`` to install these, as needed. A current version of BEDOPS ``starch`` is also required.
+The sampling scripts require installation of BEDOPS ``starch`` and a recent MySQL client. The R script ``starch_eff.R`` requires ``optparse`` and ``lattice`` libraries. Use ``install.packages()`` to install these, as needed. 
 
 ## Procedure
 
