@@ -13,14 +13,16 @@ if (is.na(opt$inFn) || is.na(opt$outFn)) {
     q()
 }
 
-input <- read.table(opt$inFn, col.names=c("original", "bzip2", "gzip"))
+input <- read.table(opt$inFn, col.names=c("original", "bzip2", "bzip2_starch", "gzip", "gzip_starch"))
 input$elements <- rep(opt$elements, nrow(input))
 input$bzip2_ratio <- input$bzip2/input$original
+input$bzip2_starch_ratio <- input$bzip2_starch/input$original
 input$gzip_ratio <- input$gzip/input$original
+input$gzip_starch_ratio <- input$gzip_starch/input$original
 write.table(input, opt$outFn, append=FALSE, quote=FALSE, sep='\t', eol='\n', row.names=FALSE, col.names=TRUE)
 
-type <- c(rep("bzip2", nrow(input)), rep("gzip", nrow(input)))
-ratios <- c(input$bzip2_ratio, input$gzip_ratio)
+type <- c(rep("bzip2", nrow(input)), rep("bzip2_starch", nrow(input)), rep("gzip", nrow(input)), rep("gzip_starch", nrow(input)))
+ratios <- c(input$bzip2_ratio, input$bzip2_starch_ratio, input$gzip_ratio, input$gzip_starch_ratio)
 bpdata <- data.frame(type, ratios)
 suppressPackageStartupMessages(require(lattice))
 pdf(paste(opt$outFn, "pdf", sep="."))
